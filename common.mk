@@ -14,10 +14,10 @@
 # limitations under the License.
 #
 
-COMMON_PATH := device/samsung/a50-common
+COMMON_PATH := device/samsung/exynos9610-common
 
 # Get non-open-source specific aspects
-$(call inherit-product, vendor/samsung/a50-common/a50-common-vendor.mk)
+$(call inherit-product, vendor/samsung/exynos9610-common/exynos9610-common-vendor.mk)
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -66,7 +66,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.5-service_64 \
     libsensorndkbridge \
-    GCameraGoPrebuilt
+    GCamGo
 
 # ConfigStore
 PRODUCT_PACKAGES += \
@@ -87,10 +87,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.4-service.clearkey \
     android.hardware.drm@1.3.vendor
-
-# FastCharge
-PRODUCT_PACKAGES += \
-    vendor.lineage.fastcharge@1.0-service.samsung
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
@@ -141,10 +137,6 @@ PRODUCT_PACKAGES += \
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light-service.samsung
-
-# Livedisplay
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service.samsung-exynos
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -241,14 +233,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/thermal/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
-
-# Touch HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.samsung
-
-# Trust HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.trust@1.0-service
 
 # USB
 PRODUCT_PACKAGES += \

@@ -1,7 +1,7 @@
 android_app_import {
-	name: "GCameraGoPrebuilt",
+	name: "GCamGo",
 	owner: "google",
-	apk: "com.google.android.apps.cameralite.apk",
+	apk: "GCamGo.apk",
 	presigned: true,
 	dex_preopt: {
 		enabled: false,
